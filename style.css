@@ -20,14 +20,10 @@ header {
 
 .logo {
     width: 720px;
-    height: 720px;
+    height: auto;
     max-width: 100%;
     display: block;
     margin: 0 auto;
-    border-radius: 50%;
-    object-fit: contain;
-    padding: 15px;
-    box-sizing: border-box;
 }
 
 header h1 {

@@ -120,3 +120,10 @@ body {
     white-space: nowrap;
     z-index: 10;
 }
+
+@media (max-width: 768px) {
+    .cnpj-info {
+        font-size: 0.65rem;
+        padding: 0 1rem;
+    }
+}

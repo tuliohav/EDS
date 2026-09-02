@@ -11,8 +11,9 @@ body {
 
 .container {
     display: flex;
-    min-height: 100vh;
+    min-height: auto;
     width: 100%;
+    position: relative;
 }
 
 /* LADO ESQUERDO */
@@ -106,12 +107,14 @@ body {
     }
 }
 
-/* RODAPÉ CNPJ */
-.rodape {
-    background-color: #0a0a0a;
-    color: rgba(255, 255, 255, 0.6);
-    text-align: center;
-    padding: 1.5rem 1rem;
-    font-size: 0.9rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+/* CNPJ */
+.cnpj-info {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    z-index: 10;
 }

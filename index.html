@@ -3,34 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Primeiro Site</title>
+    <title>Meu Site</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <img src="emdesalogo.JPG" alt="Logo do site" class="logo">
-    </header>
-
-    <main>
-        <section class="card">
-            <h2>Sobre mim</h2>
+    <div class="container">
+        <!-- LADO ESQUERDO (azul) -->
+        <div class="lado-esquerdo">
+            <img src="emdesalogo.JPG" alt="Logo do site" class="logo">
+            <h1>Sobre mim</h1>
             <p>Escreva aqui um pouco sobre você ou sobre o que o site vai tratar.</p>
-        </section>
+        </div>
 
-        <section class="card">
-            <h2>Projetos</h2>
-            <p>Lista de projetos ou conteúdo que você quer mostrar.</p>
-        </section>
+        <!-- LADO DIREITO (preto) -->
+        <div class="lado-direito">
+            <div class="info-item">
+                <div class="icone-circulo">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="info-texto">
+                    <h2>Endereço</h2>
+                    <p>Sua rua, número e bairro<br>Sua cidade — Estado</p>
+                </div>
+            </div>
 
-        <section class="card">
-            <h2>Contato</h2>
-            <p>Como as pessoas podem falar com você.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Meu Site. Feito com ❤️ e GitHub Pages.</p>
-    </footer>
+            <div class="info-item">
+                <div class="icone-circulo">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="info-texto">
+                    <h2>Contato</h2>
+                    <p>seuemail@exemplo.com<br>(00) 00000-0000</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

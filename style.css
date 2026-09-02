@@ -7,11 +7,13 @@
 body {
     font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    background-color: #000000;
+    margin: 0;
 }
 
 .container {
     display: flex;
-    min-height: auto;
+    min-height: 100vh;
     width: 100%;
     position: relative;
 }

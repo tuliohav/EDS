@@ -5,69 +5,103 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f9;
 }
 
-header {
-    background: #174799;
+.container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* LADO ESQUERDO */
+.lado-esquerdo {
+    flex: 1;
+    background-color: #174799;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 1rem;
+    padding: 4rem 3rem;
 }
 
 .logo {
-    width: 720px;
+    width: 300px;
     height: auto;
     max-width: 100%;
-    display: block;
-    margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
-header h1 {
+.lado-esquerdo h1 {
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
-main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+.lado-esquerdo p {
+    font-size: 1.1rem;
+    max-width: 400px;
+    opacity: 0.9;
 }
 
-.card {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-    transition: transform 0.2s ease;
+/* LADO DIREITO */
+.lado-direito {
+    flex: 1;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    padding: 4rem 5rem;
 }
 
-.card:hover {
-    transform: translateY(-4px);
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.card h2 {
-    color: #667eea;
-    margin-bottom: 0.5rem;
+.icone-circulo {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    border-radius: 50%;
+    background-color: #174799;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: white;
 }
 
-footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    color: #888;
-    font-size: 0.9rem;
+.info-texto h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    color: #ffffff;
 }
 
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.8rem;
+.info-texto p {
+    font-size: 1rem;
+    opacity: 0.7;
+    line-height: 1.5;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
     }
 
-    .card {
-        padding: 1.5rem;
+    .lado-esquerdo,
+    .lado-direito {
+        padding: 3rem 2rem;
+    }
+
+    .logo {
+        width: 200px;
     }
 }

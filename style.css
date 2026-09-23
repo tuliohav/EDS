@@ -1,6 +1,6 @@
 :root {
     color-scheme: dark;
-    background: #080808;
+    background: #000000;
 }
 
 * {
@@ -12,7 +12,7 @@
 body {
     font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    background-color: #080808;
+    background-color: #000000;
     color: #ffffff;
 }
 
@@ -74,7 +74,7 @@ body {
     height: 56px;
     flex: 0 0 56px;
     border-radius: 50%;
-    background-color: #174799;
+    background-color: #0097D0;
     display: flex;
     justify-content: center;
     align-items: center;

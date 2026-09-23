@@ -1,3 +1,8 @@
+:root {
+    color-scheme: dark;
+    background: #080808;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,123 +12,121 @@
 body {
     font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    background-color: #000000;
-    margin: 0;
+    background-color: #080808;
+    color: #ffffff;
 }
 
 .container {
     display: flex;
+    flex-direction: column;
     min-height: 100vh;
+    min-height: 100svh;
     width: 100%;
-    position: relative;
 }
 
-/* LADO ESQUERDO */
-.lado-esquerdo {
-    flex: 1;
-    background-color: #174799;
-    color: white;
+.site-header {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 4rem 3rem;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 16px;
+    background-color: #0097D0;
 }
 
 .logo {
-    width: 300px;
+    display: block;
+    width: min(360px, 78vw, 100%);
     height: auto;
-    max-width: 100%;
-    margin-bottom: 2rem;
+    /* Oculta o contorno incorporado ao JPEG sem alterar a caixa da imagem. */
+    clip-path: inset(1px);
 }
 
-.lado-esquerdo h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.lado-esquerdo p {
-    font-size: 1.1rem;
-    max-width: 400px;
-    opacity: 0.9;
-}
-
-/* LADO DIREITO */
-.lado-direito {
+.conteudo-principal {
     flex: 1;
-    background-color: #000000;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 3rem;
-    padding: 4rem 5rem;
+    width: min(100%, 960px);
+    margin-inline: auto;
+    padding: clamp(40px, 7vw, 80px) 32px;
+}
+
+.descricao {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    color: #e0e0e0;
+}
+
+.informacoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+    margin-top: clamp(40px, 6vw, 64px);
 }
 
 .info-item {
     display: flex;
-    align-items: center;
-    gap: 1.5rem;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .icone-circulo {
-    width: 70px;
-    height: 70px;
-    min-width: 70px;
+    width: 56px;
+    height: 56px;
+    flex: 0 0 56px;
     border-radius: 50%;
     background-color: #174799;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: white;
 }
 
+.info-texto {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
 .info-texto h2 {
-    font-size: 1.3rem;
-    margin-bottom: 0.3rem;
-    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
 }
 
 .info-texto p {
     font-size: 1rem;
-    opacity: 0.7;
-    line-height: 1.5;
+    color: #b3b3b3;
+    line-height: 1.6;
 }
 
-/* RESPONSIVO */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .lado-esquerdo,
-    .lado-direito {
-        padding: 3rem 2rem;
-    }
-
-    .logo {
-        width: 200px;
-    }
-}
-
-/* CNPJ */
 .cnpj-info {
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.85rem;
-    white-space: nowrap;
-    z-index: 10;
+    padding: 24px;
+    color: #909090;
+    font-size: 0.8rem;
+    text-align: center;
+    overflow-wrap: anywhere;
 }
 
 @media (max-width: 768px) {
-    .cnpj-info {
-        font-size: 0.65rem;
-        padding: 0 1rem;
+    .conteudo-principal {
+        padding-inline: 24px;
+    }
+
+    .informacoes {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 440px;
+        margin-inline: auto;
+        gap: 32px;
+    }
+
+    .info-item {
+        gap: 16px;
+    }
+
+    .icone-circulo {
+        width: 48px;
+        height: 48px;
+        flex-basis: 48px;
+        font-size: 1.2rem;
     }
 }
